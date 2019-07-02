@@ -6,6 +6,7 @@ This is an example project for Automated Security Testing
 
 # Sonarcloud
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/759dd508d41940528c4033a2e4a08ef4)](https://app.codacy.com/app/Corpus-Solutions/dvna?utm_source=github.com&utm_medium=referral&utm_content=corpus-solutions/dvna&utm_campaign=Badge_Grade_Dashboard)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=corpus-solutions-dvna&metric=bugs)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=corpus-solutions-dvna&metric=code_smells)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=corpus-solutions-dvna&metric=coverage)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna)
