@@ -3,7 +3,7 @@ const fsx = require("fs-extra");
 const exec = require("child_process");
 
 const app = express();
-const port = process.env.port || 8080;
+const port = process.env.port || 5000;
 
 /* CWE-770, CWE-307, CWE-400: set up rate limiter: maximum of five requests per minute
 var RateLimit = require('express-rate-limit');
@@ -14,6 +14,8 @@ var limiter = new RateLimit({
 // apply rate limiter to all requests
 app.use(limiter);
 */
+
+
 
 function getFileContents(path) {
 
@@ -70,12 +72,12 @@ function terminate() {
 //
 
 // Use-cases
-// curl http://localhost:8080/czech
-// curl http://localhost:8080/english
+// curl http://localhost:5000/czech
+// curl http://localhost:5000/english
 
 // Misuse-cases
-// curl http://localhost:8080/english%2F..%2F..
-// curl http://localhost:8080/english%2F..%2Fczech
+// curl http://localhost:5000/english%2F..%2F..
+// curl http://localhost:5000/english%2F..%2Fczech
 
 app.get("/:arg", getFile);
 
@@ -83,8 +85,8 @@ app.get("/:arg", getFile);
 // Example 2: shell injection (root takeover)
 //
 
-// curl http://localhost:8080/job/git%40github.com%3Asuculent%2Fthinx-connect.git
-// curl http://localhost:8080/job/git%40github.com%3Asuculent%2Fthinx-connect.git%26%26%20cat%20%2Fetc%2Fpasswd
+// curl http://localhost:5000/job/git%40github.com%3Asuculent%2Fthinx-connect.git
+// curl http://localhost:5000/job/git%40github.com%3Asuculent%2Fthinx-connect.git%26%26%20cat%20%2Fetc%2Fpasswd
 
 // Use-cases
 

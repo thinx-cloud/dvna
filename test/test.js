@@ -7,7 +7,7 @@ const git_url = "https://github.com/corpus-solutions/dvna";
 
 describe('app()', function () {
 
-  it('should listen on port 8080 when started', function () {
+  it('should listen on port 5000 when started', function () {
     // 1. ARRANGE (app is started)
     // 2. ACT (todo: request)
     // 3. ASSERT (request result)
@@ -28,12 +28,12 @@ describe('app()', function () {
   });
 
   // Use-cases
-  // curl http://localhost:8080/czech
-  // curl http://localhost:8080/english
+  // curl http://localhost:5000/czech
+  // curl http://localhost:5000/english
 
   // Misuse-cases
-  // curl http://localhost:8080/english%2F..%2F..
-  // curl http://localhost:8080/english%2F..%2Fczech
+  // curl http://localhost:5000/english%2F..%2F..
+  // curl http://localhost:5000/english%2F..%2Fczech
 
   xit('should return file', function (done) {
     // 1. ARRANGE
