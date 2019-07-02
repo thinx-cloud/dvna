@@ -44,8 +44,10 @@ describe('app()', function () {
 
   /// it should NOT...
 
+
   it('should terminate at end of testing', function () {
-    app.terminate();
+    app.terminate(); // terminates everything incl test.
+    done();
   });
 
 });

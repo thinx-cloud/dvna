@@ -4,10 +4,10 @@
   "description": "Damn Vulnerable Node.js App",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf ./dvna && mocha --timeout=3000",
-    "coverage": "rm -rf ./dvna && nyc --reporter=html --reporter=text --reporter=text-lcov mocha --timeout=5000 | codacy-coverage",
+    "test": "rm -rf ./dvna && mocha --timeout=30000",
+    "coverage": "rm -rf ./dvna && nyc --reporter=html --reporter=text --reporter=text-lcov mocha --timeout=30000",
     "coveralls": "npm run coverage && nyc report --reporter=text-lcov | coveralls",
-    "codacy": "npm run coverage && cat ./lcov.info | codacy-coverage"
+    "codacy": "npm run coverage && cat ./coverage/coverage.lcov | codacy-coverage"
   },
   "author": "",
   "license": "ISC",
