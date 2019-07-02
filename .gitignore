@@ -1,12 +1,15 @@
 # Mac OS System Files
-
 .DS_Store
 
 # Fetched repo
-
 thinx-connect
 
+# Private Scripts
 sonar.sh
 
+# Dynamic Dependencies
 node_modules
+
+# Scan Temp
+.scannerwork
 
