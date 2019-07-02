@@ -62,6 +62,9 @@ function runJob(req, res) {
   res.end(result);
 }
 
+function terminate() {
+  process.exit();
+}
 //
 // Example 1: path traversal (read only)
 //
@@ -90,3 +93,7 @@ app.get("/job/:job", runJob);
 // Server listener
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+// Public exports for testing
+
+module.exports = { runJob, getFile, getFileContents, terminate };

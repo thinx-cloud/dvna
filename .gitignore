@@ -13,3 +13,5 @@ node_modules
 # Scan Temp
 .scannerwork
 
+# Mock Data
+./dvna

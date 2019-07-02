@@ -6,7 +6,6 @@ This is an example project for Automated Security Testing
 
 # Sonarcloud
 
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=corpus-solutions-dvna)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=corpus-solutions-dvna&metric=bugs)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=corpus-solutions-dvna&metric=code_smells)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=corpus-solutions-dvna&metric=coverage)](https://sonarcloud.io/dashboard?id=corpus-solutions-dvna)
