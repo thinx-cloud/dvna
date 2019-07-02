@@ -2,8 +2,9 @@
   "name": "dvna",
   "version": "1.0.0",
   "description": "Damn Vulnerable Node.js App",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "rm -rf ./dvna && mocha --timeout=30000",
     "coverage": "rm -rf ./dvna && nyc --reporter=html --reporter=text --reporter=text-lcov mocha --timeout=30000",
     "coveralls": "npm run coverage && nyc report --reporter=text-lcov | coveralls",
