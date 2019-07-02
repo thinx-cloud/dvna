@@ -15,3 +15,13 @@ node_modules
 
 # Mock Data
 ./dvna
+
+# Contains Secret Repo Token
+.coveralls.yml
+
+# Temp Files
+.nyc_output/
+.secret.sh
+coverage/
+dvna/
+lcov.info

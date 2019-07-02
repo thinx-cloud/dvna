@@ -13,15 +13,17 @@ describe('app()', function () {
   });
 
   it('should run job', function () {
+
     // 1. ARRANGE (app is started)
     const req = { params: { job: git_url }};
     const res = { end: function(input) {
       console.log(input);
     }};
+
     // 2. ACT (todo: request)
     app.runJob(req, res);
-    // 3. ASSERT (request result)
-    console.log(res); // must be validated properly! check known content.
+
+    // 3. ASSERT (will not crash)
   });
 
   /*
@@ -43,9 +45,7 @@ describe('app()', function () {
   /// it should NOT...
 
   it('should terminate at end of testing', function () {
-    // 1. ARRANGE (app is started)
-    // 2. ACT (todo: request)
-    // 3. ASSERT (request result)
+    app.terminate();
   });
 
 });
