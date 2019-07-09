@@ -1,7 +1,18 @@
+require('sqreen');
+
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: 'e7e7d4e63ce44d1abf867c2ec928cb4e',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+// record a generic message and send it to Rollbar
+rollbar.log("DVNA running!");
+
 const express = require("express");
 const fsx = require("fs-extra");
 const exec = require("child_process");
-
 const app = express();
 const port = process.env.port || 5000;
 
@@ -67,6 +78,24 @@ function runJob(req, res) {
 function terminate() {
   process.exit();
 }
+
+// Global handler
+
+app.all("/*", function(req, res, next) {
+
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-type,Accept");
+
+  if (req.method == "OPTIONS") {
+    res.status(200).end();
+  } else {
+    next();
+  }
+
+});
+
+
 //
 // Example 1: path traversal (read only)
 //

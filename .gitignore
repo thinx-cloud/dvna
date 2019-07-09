@@ -6,6 +6,7 @@ thinx-connect
 
 # Private Scripts
 sonar.sh
+sqreen.json
 
 # Dynamic Dependencies
 node_modules
