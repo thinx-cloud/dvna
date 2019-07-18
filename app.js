@@ -8,7 +8,7 @@ var rollbar = new Rollbar({
 });
 
 // record a generic message and send it to Rollbar
-rollbar.log("DVNA running!");
+// rollbar.log("DVNA running!");
 
 const express = require("express");
 const fsx = require("fs-extra");
