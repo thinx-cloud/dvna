@@ -16,7 +16,7 @@ const exec = require("child_process");
 const app = express();
 const port = process.env.port || 5000;
 
-/* CWE-770, CWE-307, CWE-400: set up rate limiter: maximum of five requests per minute
+/* CWE-770, CWE-307, CWE-400: set up rate limiter: maximum of five requests per minute */
 var RateLimit = require('express-rate-limit');
 var limiter = new RateLimit({
   windowMs: 1*60*1000, // 1 minute
@@ -24,9 +24,6 @@ var limiter = new RateLimit({
 });
 // apply rate limiter to all requests
 app.use(limiter);
-*/
-
-
 
 function getFileContents(path) {
 
